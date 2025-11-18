@@ -1,10 +1,19 @@
 <style>
 :root {
-  --primary: #e63946;
-  --secondary: #264653;
-  --muted: #6c757d;
-  --card: #f7f7fa;
-  --border: #e2e6ea;
+  --primary: #ff6b6b;
+  --secondary: #b8c1ec;
+  --muted: #94a3b8;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.08);
+  --bg: #080f1f;
+  --panel: #111a2f;
+  --panel-soft: #182441;
+}
+body {
+  background: radial-gradient(circle at top, #101a32 0%, #080f1f 55%, #050914 100%);
+  color: #e2e8f0;
+  font-family: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
 }
 .page-header {
   display: none !important;
@@ -68,13 +77,14 @@
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 }
 .stat {
-  background: #fff;
+  background: var(--panel);
   padding: 1.2rem;
   border-radius: 0.9rem;
-  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
   text-align: center;
+  color: #e2e8f0;
 }
-.stat strong { font-size: 1.4rem; display: block; }
+.stat strong { font-size: 1.4rem; display: block; color: var(--secondary); }
 .deck-title {
   margin: 3rem 0 1rem;
   font-size: 2rem;
@@ -87,9 +97,9 @@
   gap: 1.5rem;
 }
 .card {
-  background: var(--card);
+  background: var(--panel);
   border-radius: 1rem;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255,255,255,0.04);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -108,8 +118,9 @@
   padding: 2rem;
   border: 1px solid var(--border);
   border-radius: 1.25rem;
-  background: #fff;
-  box-shadow: 0 22px 45px rgba(0,0,0,0.08);
+  background: var(--panel);
+  box-shadow: 0 22px 45px rgba(0,0,0,0.45);
+  color: #e2e8f0;
 }
 .detail header h2 { margin: 0; color: var(--secondary); }
 .detail header p { color: var(--muted); }
@@ -120,7 +131,7 @@
   margin-top: 1.5rem;
 }
 .tip, .extras {
-  background: var(--card);
+  background: var(--panel-soft);
   border-radius: 0.9rem;
   padding: 1rem 1.2rem;
   border: 1px dashed var(--border);
@@ -132,9 +143,9 @@
   padding: 2rem;
   text-align: center;
   border-radius: 1rem;
-  background: linear-gradient(120deg, #e63946, #f4a261);
-  color: #fff;
-  box-shadow: 0 25px 35px rgba(244, 162, 97, 0.35);
+  background: linear-gradient(120deg, #2b3e64, #1f2d46);
+  color: #e2e8f0;
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.45);
 }
 </style>
 
